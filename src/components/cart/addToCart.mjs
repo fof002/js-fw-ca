@@ -5,7 +5,7 @@ export function addToCart(event) {
     cartArray = JSON.parse(localStorage.getItem("cart"));
   }
   cartArray.forEach((product) => {
-    if (product.id != event.target.getAttribute("data-id")) {
+    if (product.id !== event.target.getAttribute("data-id")) {
       newCartArray.push(product);
     } else {
       alert("Item is already in cart");

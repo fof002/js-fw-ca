@@ -3,7 +3,7 @@ import { Cart } from "../pages/cart";
 import { HomePage } from "../pages/homepage/Homepage";
 import { IndividualProduct } from "../pages/individualProduct";
 import { Layout } from "../Layout";
-import { ContactForm } from "../pages/contact/contactForm";
+import { ContactForm } from "../pages/contact";
 import { CheckoutSuccess } from "../pages/checkoutSuccess";
 
 export function RouteComponent() {
