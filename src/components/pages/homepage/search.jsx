@@ -22,18 +22,18 @@ export function SearchProducts() {
   }, []);
 
   const filteredProducts = products.filter((product) => {
-    return product.title.toLowerCase().includes(query.toLowerCase());
+    if (document.querySelector("#searchInput").value.length === 0) {
+      document.querySelector("#searchUrl").style.display = "none";
+    } else {
+      document.querySelector("#searchUrl").style.display = "block";
+      return product.title.toLowerCase().includes(query.toLowerCase());
+    }
   });
 
-  /*function onSearch(e) {
-    e.preventDefault();
-    const value = inputRef.current.value;
-    if (value === "") return;
-    setProducts((prev) => {
-      return [...prev, value];
-    });
-    inputRef.current.value = "";
-  }*/
+  function showList() {
+    const listOfProducts = document.querySelector("#searchUrl");
+    listOfProducts.style.display = "block";
+  }
 
   return (
     <div className="mb-3 d-flex flex-column gap-2">
@@ -45,11 +45,18 @@ export function SearchProducts() {
         onChange={(e) => setQuery(e.target.value)}
         value={query}
         ref={inputRef}
+        onFocus={showList}
+        id="searchInput"
       ></input>
-      <div className="position-relative">
+      <div
+        className="position-relative"
+        id="searchUrl"
+        style={{ display: "none", zIndex: "9999" }}
+      >
         <ul
           className="position-absolute bg-white pb-3 shadow-lg"
-          style={{ zIndex: "9999", top: 0, left: 0, width: "20em" }}
+          style={{ top: 0, left: 0, width: "20em" }}
+          id="searchInput"
         >
           {filteredProducts.map((product) => {
             return (
