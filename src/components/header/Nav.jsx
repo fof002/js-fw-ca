@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { CartCount } from "../cart/cartCount";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export function Nav() {
   return (
@@ -22,7 +24,7 @@ export function Nav() {
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <Link to="/cart" className="text-white nav-link">
-              Cart
+              <FontAwesomeIcon icon={faShoppingCart} />
             </Link>
             <CartCount />
             <Link to="/contact" className="text-white nav-link">
