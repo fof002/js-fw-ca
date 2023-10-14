@@ -5,7 +5,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export function Nav() {
   return (
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-sm bg-primary">
       <div class="container-fluid">
         <Link to="/" className="navbar-brand text-white">
           Home
@@ -23,10 +23,12 @@ export function Nav() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <Link to="/cart" className="text-white nav-link">
-              <FontAwesomeIcon icon={faShoppingCart} />
-            </Link>
-            <CartCount />
+            <div className="position-relative">
+              <Link to="/cart" className="text-white nav-link">
+                <FontAwesomeIcon icon={faShoppingCart} />
+              </Link>
+              <CartCount />
+            </div>
             <Link to="/contact" className="text-white nav-link">
               Contact
             </Link>
