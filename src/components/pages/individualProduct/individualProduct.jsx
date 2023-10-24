@@ -41,6 +41,10 @@ export function IndividualProduct({ product }) {
               <ButtonGroup size="sm" className="mb-2">
                 <Button
                   data-id={product.id}
+                  data-price={product.price}
+                  data-title={product.title}
+                  data-discountedprice={product.discountedPrice}
+                  data-imageurl={product.imageUrl}
                   variant="primary"
                   onClick={addToCart}
                 >

@@ -11,8 +11,17 @@ export function CartCount() {
     setCartCount();
   }, []);
   return (
-    <div id="cartCounter" className="text-white">
-      {cart}
+    <div className="position-relative">
+      <div
+        id="cartCounter"
+        className="text-white position-absolute "
+        style={{
+          bottom: "20px",
+          borderRadius: "50%",
+        }}
+      >
+        {cart}
+      </div>
     </div>
   );
 }
