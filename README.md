@@ -1,5 +1,7 @@
 # JS-fw-ca
 
+![Screenshot 2023-12-15 at 18-59-37 React App](https://github.com/fof002/js-fw-ca/assets/80104002/a9f9ce60-bf92-4c67-b816-f2bfcba21002)
+
 Final Project exam for FED at Noroff. 
 
 ## Description
